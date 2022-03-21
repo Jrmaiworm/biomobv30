@@ -1,0 +1,146 @@
+
+
+entity DoacaoItem {
+
+    imagem ImageBlob,
+    quantidade Integer,
+    observacao String
+}
+
+entity Item {
+	descricao String,
+    imagem ImageBlob,
+    saldo Integer,
+    categoriaItem CategoriaItem,
+    unidadeMedida UnidadeMedida,
+}
+
+entity SolicitacaoItem {
+	
+    quantidade Integer,
+    observacao String
+}
+
+
+
+
+entity CadastroDoacao {
+	doacaoAnonima Boolean,
+    realizaEntrega Boolean,
+	dataDoacao LocalDate,
+	logradouro String,
+    numero Integer,
+    bairro String,
+    cidade String,
+    cep String,
+    estado String,
+    pais String,
+    complemento String
+   
+}
+
+
+
+entity CadastroSolicitacao {
+	nomeSolicitante String,
+    cpfSolicitante String,
+	dataSolicitacao LocalDate,
+    endereco String,
+    pontoReferencia String,
+    situacaoSolicitante String,
+    quantidadePessoas Integer,
+    retiraDoacao Boolean,
+    perdeuMoradia Boolean,
+    perdeuEmprego Boolean,
+    idosoDeficiente Boolean,
+    filhosPequenos Boolean,
+    observacao String,
+    dataAprovacao LocalDate,
+    ativa Boolean,
+    fatorPrioridade Float,
+    statusSolicitacao StatusSolicitacao
+    
+    
+}
+
+enum StatusSolicitacao {
+	ATENDIDO, ENCAMINHADO, REPETIDO, CANCELADO
+   
+}
+
+
+
+
+
+enum UnidadeMedida {
+	CARTELA, CENTO, CENTIMETRO,
+    CAIXA, DUZIA, EMBALAGEM, 
+	QUILOGRAMA, KIT, LITRO,
+    METRO, METRO_CUBICO, PECA,
+    TONELADA, UNIDADE, VALOR, FARDO
+}
+
+enum CategoriaItem {
+	ALIMENTO, ACESSIBILIDADE, ELETRODOMESTICO, FERRAMENTAS,
+    HIGIENE, INFANTIL, INFORMATICA, LIMPEZA, LIVROS, MONETARIO,
+   MOVEIS, PAPELARIA, SAUDE, UTILITARIO, VESTUARIO
+}
+entity Acao {
+	dataCriacao LocalDate,
+	usuarioCriacaoAcao String,
+	pendente Boolean,
+    dataExecucaoAcao LocalDate,
+    ativa Boolean,
+    foto Blob,
+    observacoes String
+   
+}
+
+
+
+	     relationship ManyToOne{
+	SolicitacaoItem{descricao} to Item
+}
+
+    relationship ManyToOne{
+	DoacaoItem{descricao} to Item
+}
+    
+    
+    
+    relationship ManyToOne{
+	CadastroDoacao to User
+}
+
+
+    
+      relationship ManyToOne{
+	DoacaoItem to CadastroDoacao{descricao} 
+}
+
+    relationship ManyToOne{
+	CadastroSolicitacao to User
+}
+
+
+    
+      relationship ManyToOne{
+	SolicitacaoItem  to CadastroSolicitacao{descricao} 
+}
+
+relationship OneToOne{
+    Acao to DoacaoItem
+    }
+    
+    
+    
+      relationship OneToOne{
+    Acao to User
+    }
+    
+    
+    
+    relationship OneToOne{
+    Acao to SolicitacaoItem
+    }
+
