@@ -5,6 +5,7 @@ Site deployed in Heroku-Biomob SOS (https://biomobsos.herokuapp.com)
 
 Guia do usuario
 [Projeto Biomob - Guia do  Usuário.pdf]
+https://github.com/Jrmaiworm/biomobv30/blob/main/Projeto%20Biomob%20-%20Guia%20do%20%20Usu%C3%A1rio.pdf
 
 ## Project Structure
 
