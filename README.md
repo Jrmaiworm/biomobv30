@@ -1,7 +1,7 @@
 # Biomob-Sistema de gerenciamento e transparencia para arrecadação e encaminhamento de doações
 
 This application was generated using JHipster 7.7.0, you can find documentation and help at [https://www.jhipster.tech](https://www.jhipster.tech).
-Site deployed in Heroku [https://biomobsos.herokuapp.com] (https://biomobsos.herokuapp.com)
+Site deployed in Heroku-Biomob SOS (https://biomobsos.herokuapp.com)
 
 ## Project Structure
 
