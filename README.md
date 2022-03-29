@@ -6,7 +6,7 @@ Site deployed in Heroku-Biomob SOS (https://biomobsos.herokuapp.com)
 Guia do usuario
 [Projeto Biomob - Guia do  Usuário.pdf]
 
-## Project Structure(https://github.com/Jrmaiworm/biomobv30/files/8372280/Projeto.Biomob.-.Guia.do.Usuario.pdf)
+## Project Structure
 
 
 Node is required for generation and recommended for development. `package.json` is always generated for a better development experience with prettier, commit hooks, scripts and so on.
