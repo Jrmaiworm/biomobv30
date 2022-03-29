@@ -1,4 +1,4 @@
-# biomobv30
+# Biomob-Sistema de gerenciamento e transparencia para arrecadação e encaminhamento de doações
 
 This application was generated using JHipster 7.7.0, you can find documentation and help at [https://www.jhipster.tech](https://www.jhipster.tech).
 
